@@ -45,14 +45,14 @@ const handleClose = () => {
 </script>
 
 <template>
-  <div class="modal-backdrop" v-if="isOpen" @click="handleClose">
+  <div class="modal-backdrop" v-if="props.isOpen" @click="handleClose">
     <div class="modal" @click.stop>
       <header class="modal-header">
-        <h3>{{ title }}</h3>
+        <h3>{{ props.title }}</h3>
       </header>
       <div class="modal-body">
         
-        <div v-if="isLoading">loading .. </div>
+        <div v-if="isLoading">...loading </div>
         <FolderTree v-else 
           :folders="folders"
           :selectedFolder="selectedFolder"

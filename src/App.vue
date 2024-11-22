@@ -15,7 +15,7 @@ const closeModal = (): void => {
   isModalOpen.value = false
 }
 
-const onOk = (folder: Folder): void => {
+const onOk = (folder: Folder | null): void => {
   if(folder){
     selectedItem.value = folder
   }
